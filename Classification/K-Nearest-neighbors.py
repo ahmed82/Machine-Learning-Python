@@ -95,8 +95,25 @@ yhat6 = neigh6.predict(X_test)
 print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh6.predict(X_train)))
 print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat6))
 
+""" What about other K?¶
+K in KNN, is the number of nearest neighbors to examine. It is supposed to be specified by User. So, how we choose right K? The general solution is to reserve a part of your data for testing the accuracy of the model. Then chose k =1, use the training part for modeling, and calculate the accuracy of prediction using all samples in your test set. Repeat this process, increasing the k, and see which k is the best for your model.
 
+We can calucalte the accuracy of KNN for different Ks."""
+Ks = 10
+mean_acc = np.zeros((Ks-1))
+std_acc = np.zeros((Ks-1))
+ConfustionMx = [];
+for n in range(1,Ks):
+    
+    #Train Model and Predict  
+    neigh = KNeighborsClassifier(n_neighbors = n).fit(X_train,y_train)
+    yhat=neigh.predict(X_test)
+    mean_acc[n-1] = metrics.accuracy_score(y_test, yhat)
 
+    
+    std_acc[n-1]=np.std(yhat==y_test)/np.sqrt(yhat.shape[0])
+
+mean_acc
 
 
 
