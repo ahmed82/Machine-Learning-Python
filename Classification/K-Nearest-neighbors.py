@@ -116,8 +116,14 @@ for n in range(1,Ks):
 mean_acc
 
 
-
-
+######################### Plot  model accuracy  for Different number of Neighbors ######################
+plt.plot(range(1,Ks),mean_acc,'g')
+plt.fill_between(range(1,Ks),mean_acc - 1 * std_acc,mean_acc + 1 * std_acc, alpha=0.10)
+plt.legend(('Accuracy ', '+/- 3xstd'))
+plt.ylabel('Accuracy ')
+plt.xlabel('Number of Nabors (K)')
+plt.tight_layout()
+plt.show()
 
 
 
