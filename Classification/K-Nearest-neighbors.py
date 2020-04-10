@@ -3,6 +3,11 @@
 Created on Wed Apr  8 17:16:15 2020
 
 @author: 1426391
+
+In K-Nearest Neighbors, — A very high value of K (ex. K = 100) produces an overly generalised model, while a very low value of k (ex. k = 1) produces a highly complex model.
+
+K-Nearest Neighbors
+KNN
 """
 import itertools
 import numpy as np
@@ -14,7 +19,7 @@ import matplotlib.ticker as ticker
 from sklearn import preprocessing
 
 
-!wget -O teleCust1000t.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/teleCust1000t.csv
+# !wget -O teleCust1000t.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/teleCust1000t.csv
 
 df = pd.read_csv('teleCust1000t.csv')
 df.head()
@@ -125,7 +130,7 @@ plt.xlabel('Number of Nabors (K)')
 plt.tight_layout()
 plt.show()
 
-
+print( "The best accuracy was with", mean_acc.max(), "with k=", mean_acc.argmax()+1) 
 
 
 
