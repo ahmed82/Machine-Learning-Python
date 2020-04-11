@@ -30,3 +30,5 @@ Module 5 - Recommender Systems
 Content-Based Recommender Systems
 Collaborative Filtering
 Lab & Review
+
+https://medium.com/@Techeliteco/machine-learning-with-pythoncognitive-class-ml0101env3-5710729cdd3b
