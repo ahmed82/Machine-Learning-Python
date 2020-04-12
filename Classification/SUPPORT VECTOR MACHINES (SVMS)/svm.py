@@ -129,10 +129,16 @@ from sklearn.metrics import jaccard_similarity_score
 jaccard_similarity_score(y_test, yhat)
 
 
-"""Practice
+"""## --------------- Practice
 Can you rebuild the model, but this time with a linear kernel? You can use __ kernel='linear'__ option, 
 when you define the svm. How the accuracy changes with the new kernel function?"""
 
+
+clf2 = svm.SVC(kernel='linear')
+clf2.fit(X_train, y_train) 
+yhat2 = clf2.predict(X_test)
+print("Avg F1-score: %.4f" % f1_score(y_test, yhat2, average='weighted'))
+print("Jaccard score: %.4f" % jaccard_similarity_score(y_test, yhat2))
 
 
 
