@@ -50,4 +50,4 @@ plt.scatter(X[:, 0], X[:, 1], marker='.')
 k_means = KMeans(init = "k-means++", n_clusters = 4, n_init = 12)
 
 # Now let's fit the KMeans model with the feature matrix we created above, X
-
+k_means.fit(X)
