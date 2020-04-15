@@ -53,12 +53,14 @@ k_means = KMeans(init = "k-means++", n_clusters = 4, n_init = 12)
 k_means.fit(X)
 
 """Now let's grab the labels for each point in the model using KMeans' 
-.labels_ attribute and save it as k_means_labels"""
+    .labels_ attribute and save it as k_means_labels"""
 k_means_labels = k_means.labels_
 k_means_labels
 
-
-
+"""We will also get the coordinates of the cluster centers using KMeans' 
+    .cluster_centers_ and save it as k_means_cluster_centers"""
+k_means_cluster_centers = k_means.cluster_centers_
+k_means_cluster_centers
 
 
 
