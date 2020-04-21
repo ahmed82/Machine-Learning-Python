@@ -36,3 +36,6 @@ Lab & Review
 Content-Based Recommender Systems
 Collaborative Filtering
 Lab & Review
+
+
+using Anaconda to provide Python with all the required libraries.
