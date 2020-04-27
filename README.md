@@ -2,9 +2,9 @@
 Learning Objectives
 In this lesson you will learn about:
 
-## Machine Learning applications 
-## Python libraries for Machine Learning
-## Supervised vs Unsupervised Learning 
+1- Machine Learning applications 
+2- Python libraries for Machine Learning
+3- Supervised vs Unsupervised Learning 
 
 ## Module 1 - Machine Learning
 Python for Machine Learning
